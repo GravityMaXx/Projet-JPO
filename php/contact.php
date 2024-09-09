@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             try {
                 $mail = new PHPMailer(true);
                 $mail->isSMTP();
-                $mail->Host       = 'smtp.gmail.com';
+                $mail->Host       = '';
                 $mail->SMTPAuth   = true;
                 $mail->Username   = 'bornerempart13008@gmail.com';
                 $mail->Password   = 'qeoryeecysoltesp';
