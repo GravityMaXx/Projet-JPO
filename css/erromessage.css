@@ -1,0 +1,37 @@
+.error-dialog {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%; /* Position initiale centrée verticalement */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Pour centrer l'élément horizontalement et verticalement */
+    width: 80%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.error-dialog p {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.error-dialog button {
+    background-color: white;
+    color: red;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.error-dialog button:hover {
+    background-color: #f2f2f2;
+}

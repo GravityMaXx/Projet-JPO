@@ -1,0 +1,125 @@
+body {
+    max-width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.slider {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slider img{
+    width: 100%;
+    display: none;
+    margin: 0;
+    padding: 0;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+
+img.active{
+    display: block;
+    animation: slideIn 0.7s;
+}
+
+
+.container{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+.cont-btn{
+    max-width:100;
+    height: auto;
+    border: 1px solid black;
+    box-shadow:0 10px 10px rgba(0,0,0,0.3);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-nav{
+    width: 50px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.nav-image:hover{
+    opacity: 0.85;
+}
+
+.nav-image:active{
+    opacity: 0.70;
+}
+
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#arrived {
+    animation: fade 0.7s;  
+}
+
+.error-dialog {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.error-dialog p {
+    font-size: 24px;
+    margin: 20px 0;
+}
+.error-dialog button {
+    background-color: white;
+    color: red;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.error-dialog button:hover {
+    background-color: #f2f2f2;
+}
+        /* Media query pour les petits écrans */
+        @media (max-width: 600px) {
+    .btn-custom a {
+        font-size: 16px;
+    }
+}
