@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $serveur = "localhost";
     $utilisateur = "qayvsgqu_ADMIN";
-    $mdp_bdd = "Laddel-DP_SNIR24"; 
+    $mdp_bdd = ""; 
     $bdd = "qayvsgqu_AVIS";
 
     $connexion = new mysqli($serveur, $utilisateur, $mdp_bdd, $bdd);
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->Host       = '';
                 $mail->SMTPAuth   = true;
                 $mail->Username   = 'bornerempart13008@gmail.com';
-                $mail->Password   = 'qeoryeecysoltesp';
+                $mail->Password   = '';
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
                 $mail->CharSet    = 'UTF-8';
                 $mail->Port       = 465;
