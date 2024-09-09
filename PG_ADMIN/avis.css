@@ -1,0 +1,161 @@
+/* avis.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header.header .logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+header.header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 2.5em;
+}
+
+.avis-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.avis {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    flex: 1 1 calc(33% - 40px);
+    margin: 20px;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: appear 0.5s forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.avis:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.avis h2 {
+    color: #0056b3;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.avis p {
+    margin-bottom: 10px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.avis p:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Adding smooth transitions */
+.avis p,
+.avis h2 {
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.avis:hover h2 {
+    color: #003366;
+}
+
+.avis:hover p {
+    color: #333;
+}
+
+/* Adding icons using Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+.avis h2::before {
+    content: "\f007";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+/* Adding responsive design */
+@media (max-width: 768px) {
+    .avis {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .avis {
+        flex: 1 1 100%;
+    }
+}
+
+/* Style for the return button */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.title {
+    display:flex;
+    justify-content :center;
+}
+
+.return-button {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.return-button:hover {
+    background-color: #003366;
+    transform: scale(1.05);
+}
