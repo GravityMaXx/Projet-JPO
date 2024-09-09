@@ -64,7 +64,7 @@
   <h3 class="text-center">  <?php
 $serveur = "localhost";
 $utilisateur = "qayvsgqu_visiteur";
-$motdepasse = "VisiteBTS_2024";
+$motdepasse = "";
 $info = "Merci d'avoir donné votre avis !";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['Envoyer'])) { // Vérifie si le formulaire est soumis
