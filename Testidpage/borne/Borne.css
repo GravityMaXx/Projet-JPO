@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'popins', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #26212f;
+  }
+  
+  .container {
+    height: 99vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-container {
+    background-color: #fff;
+    width: 600px; /* Ajustement de la largeur pour accommoder les boutons agrandis */
+    min-height: 250px;
+    border-radius: 25px;
+    padding: 30px 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #qr-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+  }
+  
+  #qr-image-container.show-qr {
+    max-height: 300px;
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+  
+  #qrImage {
+    position: absolute;
+    top: 50%; /* Déplace le QR code vers le bas de 50% de la hauteur de son conteneur */
+    left: 50%; /* Déplace le QR code vers la droite de 50% de la largeur de son conteneur */
+    transform: translate(-50%, -50%); /* Centre le QR code par rapport à son conteneur */
+  }
+  
+  #qrImage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.formation-industries-paca.fr/media/logo-rempart-274x300.jpg'); /* Remplacez 'chemin/vers/votre/image.png' par le chemin de votre image */
+    background-size: cover;
+    opacity: 0.5; /* Ajustez l'opacité de l'image selon vos préférences */
+    z-index: -1; /* Assurez-vous que l'image est en arrière-plan du QR code */
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-wrap: wrap; /* Permettre le retour à la ligne des boutons */
+    justify-content: center;
+  }
+  
+  .buttons-container button { 
+    width: 200px; /* Ajustement de la largeur des boutons */
+    padding: 40px; /* Ajustement du rembourrage des boutons */
+    background-color: rgb(43, 116, 252);
+    color: #fff;
+    outline: none;
+    border: none; /* Suppression de la bordure */
+    border-radius: 25px; /* Ajustement du rayon de la bordure */
+    font-size: 3rem; /* Ajustement de la taille de la police */
+    cursor: pointer;
+    margin: 25px; /* Espace entre les boutons */
+  }
+  
+  #lien1, #lien2 {
+    order: 1;
+  }
+  
+  #lien3 {
+    align-self: flex-start; /* Aligner à gauche */
+    order: 2; /* Pour garantir l'ordre correct */
+  }
+  
+  #lien4 {
+    align-self: flex-start; /* Aligner à gauche */
+    order: 3; /* Pour garantir l'ordre correct */
+  }
+  
